@@ -151,9 +151,15 @@ http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/
  
  Tuomo Untinen
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
  - Pirate Zombie/Pirate Skeleton made by 
  
  Michel Baradari
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  - Water splash sound
+ 
+ Brandon75689
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ - Background music
+ 
+ Jordan Trudgett
+ - Hand Icon

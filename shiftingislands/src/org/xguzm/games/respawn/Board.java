@@ -119,7 +119,7 @@ public class Board extends Stage {
 			
 			@Override
 			public void endReached() {
-				if (currentScore == maxScore){
+				if (currentScore >= maxScore * 0.7f){
 					endGame();
 				}else{
 					displayNotEnoughMessage();
@@ -386,7 +386,7 @@ public class Board extends Stage {
 		temp.set(player.getX(), player.getY());
 		temp.set(player.currentMapChunk.localToStageCoordinates(temp));
 		
-		msg.setText("Level Complete! Press Any Key to go back");
+		msg.setText("Level Complete! Click to go to menu");
 		msg.setPosition(temp.x - msg.getWidth() * 0.5f, temp.y + 40);
 		boat.setPosition(temp.x - boat.getWidth() * 0.5f, temp.y + 50);
 		msg.setVisible(true);

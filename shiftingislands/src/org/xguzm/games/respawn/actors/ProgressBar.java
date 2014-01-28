@@ -30,7 +30,7 @@ public class ProgressBar extends Table{
 		Image logImg = new Image(Assets.getImage("simplelog"));
 		
 		logImg.setSize(32, 32);
-		score = new Label("00 / 100", new LabelStyle(font, Color.WHITE));
+		score = new Label("000 / 100", new LabelStyle(font, Color.LIGHT_GRAY));
 		
 		add(logImg).padRight(3).fillX();
 		add();
@@ -50,6 +50,8 @@ public class ProgressBar extends Table{
 		
 		if (board.currentScore == board.maxScore)
 			score.setColor(Color.GREEN);
+		else if (board.currentScore >= board.maxScore * 0.7f)
+			score.setColor(Color.YELLOW);
 		super.act(delta);
 	}
 }

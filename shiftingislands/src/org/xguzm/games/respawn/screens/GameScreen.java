@@ -7,6 +7,7 @@ import org.xguzm.games.respawn.actors.ProgressBar;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.scenes.scene2d.Stage;
@@ -15,6 +16,7 @@ public class GameScreen implements Screen {
 
 	Stage gameStage;
 	Stage uiStage;
+	Music bgMusic;
 	
 	public GameScreen(){
 		float width = Gdx.graphics.getWidth(), height = Gdx.graphics.getHeight();
@@ -27,6 +29,8 @@ public class GameScreen implements Screen {
 		uiStage = new Stage(width, height, false, Respawn.SPRITE_BATCH);
 		uiStage.addActor(pBar);
 		
+		bgMusic = Gdx.audio.newMusic(Gdx.files.internal("data/island_0.ogg"));
+		bgMusic.setLooping(true);
 		//Gdx.input.setInputProcessor( new InputMultiplexer(gameStage, debuggerInput));
 		Gdx.input.setInputProcessor( gameStage );
 	}
@@ -56,7 +60,7 @@ public class GameScreen implements Screen {
 
 	@Override
 	public void show() {
-
+		bgMusic.play();
 	}
 
 	@Override
@@ -78,6 +82,7 @@ public class GameScreen implements Screen {
 	public void dispose() {
 		uiStage.dispose();
 		gameStage.dispose();
+		bgMusic.dispose();
 	}
 	
 	
