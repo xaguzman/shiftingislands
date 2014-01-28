@@ -24,4 +24,4 @@ Assets from [opengameart.org's][5] liberated pixel cup (LPC) were used, see attr
   [3]: http://www.squidi.net/threep/p035/
   [4]: http://xaguzman.github.io/shiftingislands/
   [5]: http://opengameart.org
-  [6]: http://guzman.github.io/shiftingislands
+  [6]: http://xaguzman.github.io/shiftingislands/
