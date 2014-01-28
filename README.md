@@ -3,7 +3,7 @@ Shifting Islands
 
 A game written in java using the [libgdx][1] framework. It was created as a 2014's january entry for the [#1GAM][2] game jam, the theme was respawn. This was coded in about 1 week. It is pretty much only a clone of the 'Room Conveyor Belt' [prototype][3] presented in squidi's three hundred game ideas.
 
-[PLAY IT!][5] (Requires WebGL compatible browser)
+[PLAY IT!][6] (Requires WebGL compatible browser)
 
 Tools Used
 ---
@@ -24,3 +24,4 @@ Assets from [opengameart.org's][5] liberated pixel cup (LPC) were used, see attr
   [3]: http://www.squidi.net/threep/p035/
   [4]: http://xaguzman.github.io/shiftingislands/
   [5]: http://opengameart.org
+  [6]: http://guzman.github.io/shiftingislands
