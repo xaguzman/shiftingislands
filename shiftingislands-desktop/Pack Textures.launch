@@ -7,6 +7,6 @@
 <listEntry value="1"/>
 </listAttribute>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.xguzm.games.respawn.AtlasGenerator"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="${workspace_loc}/shiftingislands-android/assets/data/unpackedimg ${workspace_loc}/shiftingislands-android/assets/data ${workspace_loc}/shiftingislands-android/assets/data/ui-unpacked ${workspace_loc}/shiftingislands-android/assets/data"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="${workspace_loc}/images/unpackedimg ${workspace_loc}/shiftingislands-android/assets/data ${workspace_loc}/images/ui-unpacked ${workspace_loc}/shiftingislands-android/assets/data"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="shiftingislands-desktop"/>
 </launchConfiguration>
