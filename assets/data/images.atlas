@@ -1,0 +1,103 @@
+
+images.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+boat
+  rotate: false
+  xy: 256, 168
+  size: 128, 64
+  orig: 128, 64
+  offset: 0, 0
+  index: -1
+enemy-sprites
+  rotate: false
+  xy: 576, 320
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+flag
+  rotate: false
+  xy: 576, 264
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: 0
+flag
+  rotate: false
+  xy: 256, 136
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: 1
+flag
+  rotate: false
+  xy: 384, 200
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: 2
+font
+  rotate: false
+  xy: 0, 0
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+hand
+  rotate: false
+  xy: 768, 440
+  size: 48, 48
+  orig: 48, 48
+  offset: 0, 0
+  index: -1
+player-sprites
+  rotate: false
+  xy: 0, 256
+  size: 576, 256
+  orig: 576, 256
+  offset: 0, 0
+  index: -1
+progress-bar
+  rotate: false
+  xy: 256, 232
+  size: 192, 24
+  orig: 192, 24
+  offset: 0, 0
+  index: -1
+progress-bg
+  rotate: false
+  xy: 576, 296
+  size: 192, 24
+  orig: 192, 24
+  offset: 0, 0
+  index: -1
+progress-fg
+  rotate: false
+  xy: 768, 488
+  size: 192, 24
+  orig: 192, 24
+  offset: 0, 0
+  index: -1
+progress-marker
+  rotate: false
+  xy: 448, 232
+  size: 8, 24
+  orig: 8, 24
+  offset: 0, 0
+  index: -1
+simplelog
+  rotate: false
+  xy: 768, 408
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+triplelog
+  rotate: false
+  xy: 816, 456
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
