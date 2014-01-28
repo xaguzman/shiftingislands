@@ -12,10 +12,8 @@ import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Window;
-import com.badlogic.gdx.scenes.scene2d.ui.Window.WindowStyle;
 import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
@@ -24,11 +22,12 @@ public class MenuScreen implements Screen {
 	
 	Stage stage;
 	
+	
 	public MenuScreen(){
+		Gdx.app.log("Main menu", "constructor");
 		
 		float width = Gdx.graphics.getWidth(), height = Gdx.graphics.getHeight();
 		stage = new Stage(width, height, false, Respawn.SPRITE_BATCH);
-			
 		
 		TextButton start = new TextButton("Play", Assets.uiSkin);
 		start.addListener(new ClickListener(){
@@ -92,6 +91,7 @@ public class MenuScreen implements Screen {
 
 	@Override
 	public void hide() {	
+		stage.dispose();
 	}
 
 	@Override
@@ -104,7 +104,6 @@ public class MenuScreen implements Screen {
 
 	@Override
 	public void dispose() {	
-		stage.dispose();
 	}
 
 }

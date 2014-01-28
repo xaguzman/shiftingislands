@@ -23,7 +23,7 @@ public class InstructionsScreen implements Screen{
 	public InstructionsScreen(){		
 		float width = Gdx.graphics.getWidth(), height = Gdx.graphics.getHeight();
 		stage = new Stage(width, height, false, Respawn.SPRITE_BATCH);
-				
+	
 		TextButton back = new TextButton("Back", Assets.uiSkin);
 		back.addListener(new ClickListener(){
 			@Override
@@ -63,12 +63,13 @@ public class InstructionsScreen implements Screen{
 	}
 
 	@Override
-	public void show() {	
+	public void show() {
+		
 	}
 
 	@Override
 	public void hide() {
-		
+		stage.dispose();
 	}
 
 	@Override
@@ -82,7 +83,6 @@ public class InstructionsScreen implements Screen{
 
 	@Override
 	public void dispose() {
-		stage.dispose();
 	}
 
 }

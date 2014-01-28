@@ -5,8 +5,6 @@ import org.xguzm.games.respawn.Respawn;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.badlogic.gdx.backends.gwt.preloader.Preloader;
-import com.badlogic.gdx.backends.gwt.preloader.Preloader.PreloaderCallback;
 
 public class GwtLauncher extends GwtApplication {
 	@Override
@@ -15,8 +13,13 @@ public class GwtLauncher extends GwtApplication {
 		return cfg;
 	}
 
+	private Respawn game;
 	@Override
 	public ApplicationListener getApplicationListener () {
-		return new Respawn();
+		if (game == null)
+			game = new Respawn();
+		return game;
 	}
+	
+	
 }

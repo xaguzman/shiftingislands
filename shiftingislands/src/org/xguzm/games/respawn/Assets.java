@@ -1,6 +1,7 @@
 package org.xguzm.games.respawn;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -17,6 +18,7 @@ public class Assets {
 	private static ObjectMap<String, Sound> sounds = new ObjectMap<String, Sound>();
 	private static TextureAtlas atlas;
 	public static Skin uiSkin ;
+	//private static AssetManager manager = new AssetManager();
 	
 	public static void load(){
 		loadTempGraphics();
@@ -125,7 +127,7 @@ public class Assets {
 		sounds.clear();
 		images.clear();
 		animations.clear();
-		uiSkin.dispose();
+		//uiSkin.dispose();
 	}
 
 	public static BitmapFont getFont(String name) {

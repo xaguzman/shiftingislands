@@ -40,6 +40,7 @@ public class GameScreen implements Screen {
 		Gdx.gl.glClearColor( 21f / 255f , 108f / 255f , 153f / 255f, 1);
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		
+		
 		delta = Math.min(delta, 1f / 60f);
 		gameStage.act(delta);
 		uiStage.act(delta);

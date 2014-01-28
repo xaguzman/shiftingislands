@@ -1,9 +1,10 @@
 package org.xguzm.games.respawn;
 
-import org.xguzm.games.respawn.screens.GameScreen;
+import org.xguzm.games.respawn.screens.InstructionsScreen;
 import org.xguzm.games.respawn.screens.MenuScreen;
 
 import com.badlogic.gdx.Game;
+import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class Respawn extends Game{
@@ -14,8 +15,9 @@ public class Respawn extends Game{
 	public void create() {
 		Respawn.SPRITE_BATCH = new SpriteBatch();
 		Assets.load();
+		
 		//setScreen(new GameScreen());
-		setScreen(new MenuScreen());
+		setScreen(new InstructionsScreen());
 	}
 	
 	@Override
