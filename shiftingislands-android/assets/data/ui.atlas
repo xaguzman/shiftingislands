@@ -26,7 +26,7 @@ font
   orig: 256, 256
   offset: 0, 0
   index: -1
-menu-bg
+instructions
   rotate: false
   xy: 0, 288
   size: 800, 480

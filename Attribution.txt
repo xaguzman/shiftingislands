@@ -153,3 +153,7 @@ http://gaurav.munjal.us/Universal-LPC-Spritesheet-Character-Generator/
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
  - Pirate Zombie/Pirate Skeleton made by 
+ 
+ Michel Baradari
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ - Water splash sound

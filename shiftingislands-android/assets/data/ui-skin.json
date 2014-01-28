@@ -11,5 +11,12 @@
 	},
 	com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
 		default: { down: btndown, up: btnup, font: default, fontColor: black },
+	},
+	com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
+		default: { font: default, fontColor: white }
+	},
+	com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
+		default: { titleFont: default, titleFontColor: white },
+		instructions: { titleFont: default, background: instructions, titleFontColor: white }
 	}
 }

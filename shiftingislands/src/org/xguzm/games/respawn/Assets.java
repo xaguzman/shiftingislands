@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.ObjectMap;
 
 public class Assets {
@@ -15,6 +16,7 @@ public class Assets {
 	private static ObjectMap<String, BitmapFont> fonts = new ObjectMap<String, BitmapFont>();
 	private static ObjectMap<String, Sound> sounds = new ObjectMap<String, Sound>();
 	private static TextureAtlas atlas;
+	public static Skin uiSkin ;
 	
 	public static void load(){
 		loadTempGraphics();
@@ -22,6 +24,7 @@ public class Assets {
 		sounds.put("coin1", Gdx.audio.newSound(Gdx.files.internal("data/picked-coin.ogg")));
 		sounds.put("hit", Gdx.audio.newSound(Gdx.files.internal("data/hit.ogg")));
 		sounds.put("newSpawn", Gdx.audio.newSound(Gdx.files.internal("data/newSpawn.ogg")));
+		uiSkin = new Skin(Gdx.files.internal("data/ui-skin.json"), new TextureAtlas(Gdx.files.internal("data/ui.atlas")));
 	}
 	
 	private static void loadTempGraphics(){
@@ -121,6 +124,7 @@ public class Assets {
 		sounds.clear();
 		images.clear();
 		animations.clear();
+		uiSkin.dispose();
 	}
 
 	public static BitmapFont getFont(String name) {

@@ -1,5 +1,6 @@
 package org.xguzm.games.respawn.screens;
 
+import org.xguzm.games.respawn.Assets;
 import org.xguzm.games.respawn.Respawn;
 
 import com.badlogic.gdx.Game;
@@ -9,48 +10,62 @@ import com.badlogic.gdx.graphics.GL10;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
+import com.badlogic.gdx.scenes.scene2d.ui.Window;
+import com.badlogic.gdx.scenes.scene2d.ui.Window.WindowStyle;
+import com.badlogic.gdx.scenes.scene2d.utils.Align;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 
 public class MenuScreen implements Screen {
 	
 	Stage stage;
-	TextureAtlas atlas;
-	Skin skin;
 	
 	public MenuScreen(){
+		
 		float width = Gdx.graphics.getWidth(), height = Gdx.graphics.getHeight();
 		stage = new Stage(width, height, false, Respawn.SPRITE_BATCH);
-		atlas = new TextureAtlas(Gdx.files.internal("data/ui.atlas"));
-		skin = new Skin(Gdx.files.internal("data/ui-skin.json"), atlas);
+			
 		
-		Table layout = new Table(skin);
-		layout.setBackground("menu-bg");
-		layout.setFillParent(true);
-		
-		TextButton start = new TextButton("Play", skin);
+		TextButton start = new TextButton("Play", Assets.uiSkin);
 		start.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				((Game)Gdx.app.getApplicationListener()).setScreen(new GameScreen());
 			}
 		});
-		TextButton instructions = new TextButton("Instructions", skin);
+		TextButton instructions = new TextButton("Instructions", Assets.uiSkin);
 		instructions.addListener(new ClickListener(){
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
 				((Game)Gdx.app.getApplicationListener()).setScreen(new InstructionsScreen());
 			}
 		});
+		Label legend = new Label("You crashed in an island with shifting landscape! \nGather wood to"
+				+ " build your escape boat while \navoiding undead pirates", Assets.uiSkin);
 		
-		layout.add(start).bottom();
-		layout.add(instructions).bottom();
+		legend.setWrap(true);
+		legend.setAlignment(Align.center);
+		legend.setFontScale(0.8f);
+		legend.pack();
 		
-		stage.addActor(layout);
+		Window window = new Window("Shifting islands", Assets.uiSkin);
+		window.setFillParent(true);
+		window.setMovable(false);
+		window.padTop(40);
 		
+		window.add(legend).expandX().colspan(2).padBottom(60);
+		window.row();
+		window.add(start).bottom();
+		window.add(instructions).bottom();
+		
+		window.pack();
+		stage.addActor(window);
+		
+		window.debug();
 		
 		Gdx.input.setInputProcessor(stage);
 	}
@@ -64,6 +79,7 @@ public class MenuScreen implements Screen {
 		
 		stage.act();
 		stage.draw();
+		//Table.drawDebug(stage);
 	}
 
 	@Override
@@ -88,9 +104,7 @@ public class MenuScreen implements Screen {
 
 	@Override
 	public void dispose() {	
-		atlas.dispose();
 		stage.dispose();
-		skin.dispose();
 	}
 
 }
