@@ -1,0 +1,35 @@
+
+ui.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+btndown
+  rotate: false
+  xy: 800, 736
+  size: 32, 32
+  split: 16, 15, 16, 15
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+btnup
+  rotate: false
+  xy: 0, 0
+  size: 32, 32
+  split: 15, 15, 15, 15
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+font
+  rotate: false
+  xy: 0, 32
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+instructions
+  rotate: false
+  xy: 0, 288
+  size: 800, 480
+  orig: 800, 480
+  offset: 0, 0
+  index: -1
