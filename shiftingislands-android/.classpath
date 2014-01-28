@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="lib" path="libs/gdx-backend-android.jar" sourcepath="libs/gdx-backend-android-sources.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="/shiftingislands/libs/gdx.jar" sourcepath="/shiftingislands/libs/gdx-sources.jar"/>
+	<classpathentry kind="lib" path="/shiftingislands/libs/tween-engine-api.jar" sourcepath="/shiftingislands/libs/tween-engine-api-sources.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/shiftingislands"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

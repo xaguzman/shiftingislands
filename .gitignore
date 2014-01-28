@@ -1,0 +1,10 @@
+*/gen
+*/bin
+/.metadata
+*/gwt-unitCache
+*/war/assets
+*/war/node_modules
+*/war/deploy
+*/war/WEB-INF/classes
+*/war/WEB-INF/deploy
+*/war/org.xguzm.games.respawn.GwtDefinition
