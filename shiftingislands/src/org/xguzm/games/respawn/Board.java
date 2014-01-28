@@ -392,6 +392,8 @@ public class Board extends Stage {
 		msg.setVisible(true);
 		boat.setVisible(true);
 		
+		Assets.getSound("splash").play();
+		
 		Gdx.input.setInputProcessor( new InputAdapter(){
 			@Override
 			public boolean touchDown(int screenX, int screenY, int pointer, int button) {

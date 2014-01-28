@@ -24,6 +24,8 @@ public class Assets {
 		sounds.put("coin1", Gdx.audio.newSound(Gdx.files.internal("data/picked-coin.ogg")));
 		sounds.put("hit", Gdx.audio.newSound(Gdx.files.internal("data/hit.ogg")));
 		sounds.put("newSpawn", Gdx.audio.newSound(Gdx.files.internal("data/newSpawn.ogg")));
+		sounds.put("splash", Gdx.audio.newSound(Gdx.files.internal("data/splash2.ogg")));
+		
 		uiSkin = new Skin(Gdx.files.internal("data/ui-skin.json"), new TextureAtlas(Gdx.files.internal("data/ui.atlas")));
 	}
 	
@@ -32,7 +34,6 @@ public class Assets {
 		images.put("triplelog", getAtlas().findRegion("triplelog"));
 		images.put("hand", getAtlas().findRegion("hand"));
 		images.put("boat", getAtlas().findRegion("boat"));
-		//animations.put("coin", new Animation( 1f / 5f, getAtlas().findRegions("goldCoin"), Animation.LOOP_PINGPONG ) );
 		
 		TextureRegion[][] enemySprites = getAtlas().findRegion("enemy-sprites").split(32, 48);
 		Animation zombieUp = new Animation(0.18f, enemySprites[3][0], enemySprites[3][1], enemySprites[3][2]);
