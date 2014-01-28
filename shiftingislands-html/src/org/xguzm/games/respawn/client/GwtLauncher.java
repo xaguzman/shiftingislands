@@ -19,9 +19,4 @@ public class GwtLauncher extends GwtApplication {
 	public ApplicationListener getApplicationListener () {
 		return new Respawn();
 	}
-@Override
-public PreloaderCallback getPreloaderCallback() {
-	// TODO Auto-generated method stub
-	return super.getPreloaderCallback();
-}
 }

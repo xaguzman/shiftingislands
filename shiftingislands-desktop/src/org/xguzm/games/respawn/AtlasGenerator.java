@@ -10,6 +10,7 @@ public class AtlasGenerator {
 	}
 	
 	private static void packTextures(String[] args) {
-		TexturePacker2.processIfModified(args[0], args[1], "images");	
+		TexturePacker2.processIfModified(args[0], args[1], "images");
+		TexturePacker2.processIfModified(args[2], args[3], "ui");
 	}
 }

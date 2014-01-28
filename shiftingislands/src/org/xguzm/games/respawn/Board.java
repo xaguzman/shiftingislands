@@ -10,6 +10,7 @@ import org.xguzm.games.respawn.actors.Player;
 import org.xguzm.games.respawn.events.PlayerEvent;
 import org.xguzm.games.respawn.events.PlayerEvent.Type;
 import org.xguzm.games.respawn.events.PlayerEventListener;
+import org.xguzm.games.respawn.screens.MenuScreen;
 import org.xguzm.games.respawn.tweens.CameraAccesor;
 
 import aurelienribon.tweenengine.BaseTween;
@@ -18,7 +19,9 @@ import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenCallback;
 import aurelienribon.tweenengine.TweenManager;
 
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -389,7 +392,14 @@ public class Board extends Stage {
 		msg.setVisible(true);
 		boat.setVisible(true);
 		
-		//Gdx.input
+		Gdx.input.setInputProcessor( new InputAdapter(){
+			@Override
+			public boolean touchDown(int screenX, int screenY, int pointer, int button) {
+				((Game)Gdx.app.getApplicationListener() ).setScreen(new MenuScreen());
+				return true;
+			}
+		});
+		
 	}
 	
 	// tween callbacks

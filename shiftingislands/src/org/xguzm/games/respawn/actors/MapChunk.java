@@ -52,6 +52,7 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.Event;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.Group;
+import com.badlogic.gdx.scenes.scene2d.actions.RepeatAction;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ObjectMap;
@@ -200,11 +201,8 @@ public class MapChunk extends Group {
 			respawnX = x;
 			respawnY = y;
 			respawnMarker = new Image(Assets.getImage("hand"));
-			respawnMarker.setPosition(getX(x) - 25, getY(y) + 22);
+			respawnMarker.setPosition(getX(x) - 25, getY(y) + 34);
 			respawnMarker.pack();
-			@SuppressWarnings("unused")
-			int i  = 0;
-			i++;
 		}
 		else if(type.equals("player")){
 			addActor(new Player(this));
@@ -223,7 +221,6 @@ public class MapChunk extends Group {
 		}else if(type.equalsIgnoreCase("goal")){
 			Flag finishLine = new Flag();
 			
-			//float halfw = tileWidth * 0.5f;
 			float offsetY = tileHeight * 0.75f;
 			finishLine.setPosition(x * tileWidth , y * tileHeight + offsetY);
 			
@@ -495,11 +492,17 @@ public class MapChunk extends Group {
 		return x == respawnX && y == respawnY;
 	}
 	
+	RepeatAction markerAction; 
 	public void setActiveSpawn(boolean isCurrentSpawn){
-		respawnMarker.removeAction(respawnMarkerAnimation);
+		if (markerAction != null){
+			respawnMarker.removeAction(markerAction);
+			Pools.get(RepeatAction.class).free(markerAction);
+		}
 		if (isCurrentSpawn){
-			respawnMarker.addAction(respawnMarkerAnimation);
-			
+			markerAction = forever(sequence ( moveBy(0, -15, 0.25f), moveBy(0, 15, 0.25f) ));
+			respawnMarker.addAction(markerAction);
+		}else{
+			markerAction = null;
 		}
 		
 		this.isCurrentRespawn = isCurrentSpawn;
@@ -556,6 +559,6 @@ public class MapChunk extends Group {
 		return type.equalsIgnoreCase("goal");
 	}
 
-	Action respawnMarkerAnimation = forever(sequence ( moveBy(0, -15, 0.25f), moveBy(0, 15, 0.25f) ));
+	
 	
 }
